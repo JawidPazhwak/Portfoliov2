@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="meta-description" name="description" content="">
+    <meta name="keywords" content="software engineer, developer, portfolio, AI, full-stack, machine learning">
+    <meta name="theme-color" content="#030014">
+    <title id="page-title"></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bridge.css">
+</head>
+<body>
+    <!-- Ambient Background Effects -->
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-orb ambient-orb-1"></div>
+        <div class="ambient-orb ambient-orb-2"></div>
+        <div class="ambient-orb ambient-orb-3"></div>
+        <div class="ambient-orb ambient-orb-4"></div>
+    </div>
+
+    <!-- Particle System -->
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+    <!-- Navigation -->
+    <nav id="main-nav" class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" aria-label="Home">
+                <span id="nav-logo-text" class="gradient-text"></span>
+            </a>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <ul id="nav-menu" class="nav-menu" role="menubar">
+                <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#education" class="nav-link" role="menuitem">Education</a></li>
+                <li role="none"><a href="#certifications" class="nav-link" role="menuitem">Certifications</a></li>
+                <li role="none"><a href="#experience" class="nav-link" role="menuitem">Experience</a></li>
+                <li role="none"><a href="#contact" class="nav-link nav-link-cta" role="menuitem">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg-mesh" aria-hidden="true"></div>
+        <div class="hero-orbit-ring hero-orbit-ring-1" aria-hidden="true"></div>
+        <div class="hero-orbit-ring hero-orbit-ring-2" aria-hidden="true"></div>
+        <div class="hero-orbit-ring hero-orbit-ring-3" aria-hidden="true"></div>
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <span class="hero-badge-dot"></span>
+                <span id="hero-badge-text"></span>
+            </div>
+            <h1 class="hero-title reveal">
+                <span class="hero-title-line" id="hero-greeting"></span>
+                <span class="hero-title-name gradient-text" id="hero-name"></span>
+            </h1>
+            <div class="hero-subtitle-wrapper reveal">
+                <span class="hero-subtitle-static">I build </span>
+                <span class="hero-subtitle-typed" id="typed-text"></span>
+                <span class="hero-cursor">|</span>
+            </div>
+            <p class="hero-description reveal" id="hero-description"></p>
+            <div class="hero-actions reveal">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Get in Touch</span>
+                </a>
+            </div>
+            <div class="hero-stats reveal" id="hero-stats"></div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+            <div class="scroll-indicator-mouse"><div class="scroll-indicator-wheel"></div></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Who I Am</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-wrapper reveal">
+                    <div class="about-image-container">
+                        <div class="about-image-glow" aria-hidden="true"></div>
+                        <div class="about-image" id="about-image">
+                            <div class="about-image-placeholder">
+                                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            </div>
+                        </div>
+                        <div class="about-image-ring" aria-hidden="true"></div>
+                    </div>
+                </div>
+                <div class="about-content reveal" id="about-content"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">My Expertise</span>
+                <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid" id="skills-grid"></div>
+        </div>
+        <svg width="0" height="0" aria-hidden="true">
+            <defs>
+                <linearGradient id="gradient-icon" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#6c63ff"/>
+                    <stop offset="100%" stop-color="#00d4ff"/>
+                </linearGradient>
+            </defs>
+        </svg>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Selected Work</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid" id="projects-grid"></div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Academic Background</span>
+                <h2 class="section-title">Education <span class="gradient-text">Journey</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline" id="education-timeline">
+                <div class="timeline-line" aria-hidden="true"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section certifications">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Credentials</span>
+                <h2 class="section-title">Professional <span class="gradient-text">Certifications</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="certs-grid" id="certs-grid"></div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Career Path</span>
+                <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline" id="experience-timeline">
+                <div class="timeline-line" aria-hidden="true"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                <div class="section-line"></div>
+                <p class="section-description">Interested in working together? Have a project in mind? Let's build something extraordinary.</p>
+            </div>
+            <div class="contact-grid" id="contact-grid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo gradient-text" id="footer-logo"></a>
+                <p class="footer-text" id="footer-tagline"></p>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p class="footer-copyright" id="footer-copyright"></p>
+                <p class="footer-built">Built with passion &amp; precision</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
