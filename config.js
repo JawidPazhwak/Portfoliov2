@@ -108,6 +108,25 @@ const CONFIG = {
             ],
         },
         {
+            title: "Music",
+            icon: "🎤",
+            items: [
+                { name: "Hip-Hop Artist",  level: 100 },
+                { name: "Rapper",  level: 100 },
+                { name: "Producer",  level: 100 },
+            ],
+        },
+         {
+            title: "Graphic Designer",
+            icon: "🎨",
+            items: [
+                { name: "Adobe Photoshop",  level: 100 },
+                { name: "Adobe Illustrator",  level: 100 },
+                { name: "Adobe Premier Pro",  level: 100 },
+                { name: "Canva",  level: 100 },
+            ],
+        },
+        {
             title: "Sports",
             icon: "☯️",
             items: [
